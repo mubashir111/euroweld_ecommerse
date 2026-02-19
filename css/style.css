@@ -28,7 +28,18 @@ body
       IMPORT FILE
 ========================================================*/
 @import url("../fonts/montserrat-fonts.css");
+/*=======================================================
+      IMPORT FILE
+========================================================*/
+@import url("../fonts/montserrat-fonts.css");
 @import url("animate.css");
+
+.add-to-quote {
+	position: relative;
+	z-index: 100 !important;
+	cursor: pointer !important;
+	pointer-events: auto !important;
+}
 
 /*=======================================================
       THEME STYLING START
@@ -1762,6 +1773,33 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       PAPULAR ITEM
 ========================================================*/
+.papular-block.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.papular-block.row:before,
+.papular-block.row:after {
+	display: none;
+}
+
+/* Ensure columns stretch */
+.papular-block .col-md-3 {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Ensure items take full height */
+.papular-block .item {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 30px;
+	/* Ensure spacing between rows */
+}
+
 .papular-block .item-img {
 	position: relative;
 	overflow: hidden;
@@ -2119,7 +2157,9 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .shop-detail .item-owner li span {
-	color: #ffe115;
+	color: #2d3a4b;
+	font-weight: 600;
+	margin-left: 5px;
 }
 
 .shop-detail .quinty .btn {
@@ -3989,11 +4029,23 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
       SUB BANNER
 ========================================================*/
 .sub-bnr {
-	background: url(../images/sub-bnr-bg.jpg) no-repeat;
+	background: url(../images/product-banner.webp) no-repeat;
 	background-size: cover !important;
-	min-height: 610px;
+	min-height: 450px;
 	text-align: center;
 	position: relative;
+	z-index: 1;
+}
+
+.sub-bnr:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
 }
 
 .sub-bnr h4 {
@@ -4005,7 +4057,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .sub-bnr p {
-	color: #666666;
+	color: #fff;
 	letter-spacing: 0px;
 	font-family: 'Playfair Display', serif;
 	font-size: 14px;
@@ -5188,4 +5240,199 @@ main {
 .cart-ship-info.register .bootstrap-select.btn-group .dropdown-menu li a span.text {
 	display: inline-block;
 	font-size: 13px;
+}
+
+/* ==============================================
+   CART SIDEBAR
+   ============================================== */
+.cart-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 9998;
+	display: none;
+}
+
+.cart-overlay.active {
+	display: block;
+}
+
+#cart-sidebar {
+	position: fixed;
+	top: 0;
+	right: -350px;
+	width: 350px;
+	height: 100%;
+	background: #fff;
+	z-index: 9999;
+	transition: right 0.3s ease-in-out;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+}
+
+#cart-sidebar.active {
+	right: 0;
+}
+
+.cart-header {
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cart-header h4 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.close-cart {
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.cart-items {
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: 20px;
+}
+
+.cart-item {
+	display: flex;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #f9f9f9;
+	padding-bottom: 15px;
+}
+
+.cart-item img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	margin-right: 15px;
+}
+
+.cart-item-details {
+	flex-grow: 1;
+}
+
+.cart-item-details h5 {
+	margin: 0 0 5px;
+	font-size: 14px;
+}
+
+.cart-item-details h5 a {
+	color: #333;
+}
+
+.cart-item-qty {
+	font-size: 12px;
+	color: #999;
+}
+
+.remove-from-cart-btn {
+	cursor: pointer;
+	color: #ff0000;
+	padding: 0 5px;
+}
+
+.cart-footer {
+	padding: 20px;
+	border-top: 1px solid #eee;
+}
+
+.btn-view-cart {
+	display: block;
+	width: 100%;
+	background: #2d3a4b;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.btn-view-cart:hover {
+	background: #ffe115;
+	color: #2d3a4b;
+}
+
+/* Ensure navbar user-basket is clickable */
+.user-basket {
+	cursor: pointer;
+}
+
+/* ==============================================
+   QUOTE REQUEST FORM
+   ============================================== */
+#quote-form label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #2d3a4b;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+#quote-form input[type="text"],
+#quote-form input[type="email"],
+#quote-form select,
+#quote-form textarea {
+	width: 100%;
+	height: 46px;
+	padding: 10px 15px;
+	border: 1px solid #e0e0e0;
+	background-color: #f9f9f9;
+	border-radius: 0;
+	font-size: 14px;
+	color: #333;
+	transition: all 0.3s ease;
+	margin-bottom: 20px;
+	outline: none;
+}
+
+
+#quote-form input:focus,
+#quote-form select:focus,
+#quote-form textarea:focus {
+	border-color: #2d3a4b;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(45, 58, 75, 0.1);
+}
+
+#quote-form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+#quote-form button[type="submit"] {
+	margin-top: 10px;
+	width: 100%;
+	background-color: #2d3a4b;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border: none;
+	transition: background-color 0.3s ease;
+}
+
+#quote-form button[type="submit"]:hover {
+	background-color: #ffe115;
+	color: #2d3a4b;
+}
+
+/* Specific adjustment for mobile layout */
+#quote-form .col-xs-4 {
+	padding-right: 5px;
+}
+
+#quote-form .col-xs-8 {
+	padding-left: 5px;
 }

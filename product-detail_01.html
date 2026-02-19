@@ -9,6 +9,13 @@
   <meta name="author" content="M_Adnan">
   <title>ECOSHOP - Multipurpose eCommerce HTML5 Template</title>
 
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Europull Product">
+  <meta property="og:description" content="Check out this product from Europull.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+
   <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
   <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
 
@@ -111,8 +118,7 @@
       <div class="position-center-center">
         <div class="container">
           <h4>WOOD CHAIR</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
-            Sed feugiat, tellus vel tristique posuere, diam</p>
+          <p>High quality lifting and material handling equipment.</p>
           <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li class="active">Data</li>
@@ -182,18 +188,18 @@
                   <!-- INFOMATION -->
                   <div class="inner-info">
                     <h6>DOWNLOAD RESOURCES</h6>
-                    <p><a href="#"><i class="fa fa-file-pdf-o"></i> Product Catalog.pdf</a></p>
-                    <p><a href="#"><i class="fa fa-file-pdf-o"></i> Technical Specifications.pdf</a></p>
+                    <p><a href="#" class="btn btn-small btn-round"
+                        style="background: #2d3a4b; color: #fff; padding: 10px 20px;"><i class="fa fa-file-pdf-o"
+                          style="margin-right: 8px;"></i> Product Catalog.pdf</a></p>
 
                     <h6>SHARE THIS PRODUCT</h6>
 
                     <!-- Social Icons -->
                     <ul class="social_icons">
-                      <li><a href="#."><i class="icon-social-facebook"></i></a></li>
-                      <li><a href="#."><i class="icon-social-twitter"></i></a></li>
-                      <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
-                      <li><a href="#."><i class="icon-social-youtube"></i></a></li>
-                      <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+                      <li><a href="#." class="share-facebook" target="_blank"><i class="icon-social-facebook"></i></a>
+                      </li>
+                      <li><a href="#." class="share-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="#." class="share-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -206,7 +212,7 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs animate fadeInUp" data-wow-delay="0.4s" role="tablist">
               <li role="presentation" class="active"><a href="#descr" role="tab" data-toggle="tab">DESCRIPTION</a></li>
-              <li role="presentation"><a href="#review" role="tab" data-toggle="tab">REVIEW (03)</a></li>
+              <!-- <li role="presentation"><a href="#review" role="tab" data-toggle="tab">REVIEW (03)</a></li> -->
               <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">INFORMATION</a></li>
             </ul>
 
@@ -214,11 +220,7 @@
             <div class="tab-content animate fadeInUp" data-wow-delay="0.4s">
               <!-- DESCRIPTION -->
               <div role="tabpanel" class="tab-pane fade in active" id="descr">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed lectus id nisi interdum mollis. Nam
-                  congue tellus quis elit mattis congue. Aenean eu massa sed mauris hendrerit ornare sed eget ante.
-                  Vestibulum id eros quam. Nunc volutpat at magna gravida eleifend. Phasellus sit amet nisi tempus,
-                  tincidunt elit ac, tempor metus. <br>
-                </p>
+                <p>Product details loading...</p>
                 <h6>THE SIMPLE FACTS</h6>
                 <ul>
                   <li>
@@ -243,17 +245,15 @@
               </div>
 
               <!-- REVIEW -->
+              <!--
               <div role="tabpanel" class="tab-pane fade" id="review">
                 <h6>3 REVIEWS FOR SHIP YOUR IDEA</h6>
 
-                <!-- REVIEW PEOPLE 1 -->
                 <div class="media">
                   <div class="media-left">
-                    <!--  Image -->
                     <div class="avatar"> <a href="#"> <img class="media-object" src="images/avatar-1.jpg" alt=""> </a>
                     </div>
                   </div>
-                  <!--  Details -->
                   <div class="media-body">
                     <p class="font-playfair">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                       tempor incididunt ut
@@ -261,16 +261,12 @@
                     <h6>TYRION LANNISTER <span class="pull-right">MAY 10, 2016</span> </h6>
                   </div>
                 </div>
-
-                <!-- REVIEW PEOPLE 1 -->
 
                 <div class="media">
                   <div class="media-left">
-                    <!--  Image -->
                     <div class="avatar"> <a href="#"> <img class="media-object" src="images/avatar-2.jpg" alt=""> </a>
                     </div>
                   </div>
-                  <!--  Details -->
                   <div class="media-body">
                     <p class="font-playfair">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                       tempor incididunt ut
@@ -279,7 +275,6 @@
                   </div>
                 </div>
 
-                <!-- ADD REVIEW -->
                 <h6 class="margin-t-40">ADD REVIEW</h6>
                 <form>
                   <ul class="row">
@@ -299,7 +294,6 @@
                       </label>
                     </li>
                     <li class="col-sm-6">
-                      <!-- Rating Stars -->
                       <div class="stars"> <span>YOUR RATING</span> <i class="fa fa-star"></i><i
                           class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                           class="fa fa-star"></i></div>
@@ -310,6 +304,7 @@
                   </ul>
                 </form>
               </div>
+              -->
 
               <!-- TAGS -->
               <div role="tabpanel" class="tab-pane fade" id="tags"> </div>
@@ -331,84 +326,88 @@
           <!-- Popular Item Slide -->
           <div class="papular-block block-slide">
 
-            <!-- Item -->
+            <!-- Item 1: Manual Chain Hoist -->
             <div class="item">
               <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="images/products/manual-chain-hoist.png" alt=""> <img
-                  class="img-2" src="images/products/manual-chain-hoist.png" alt="">
+              <div class="item-img"> <img class="img-1" src="images/original_products/manual-chain-hoist.jpg"
+                  alt="Manual Chain Hoist"> <img class="img-2" src="images/original_products/manual-chain-hoist.jpg"
+                  alt="Manual Chain Hoist">
                 <!-- Overlay -->
                 <div class="overlay">
                   <div class="position-center-center">
-                    <div class="inn"><a href="images/products/manual-chain-hoist.png" data-lighter><i
+                    <div class="inn"><a href="images/original_products/manual-chain-hoist.jpg" data-lighter><i
                           class="icon-magnifier"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
                   </div>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=chain-block">Chain Block</a>
-                <p>Lifting Equipment</p>
+              <div class="item-name"> <a href="product-detail_01.html?id=manual-chain-hoist">Manual Chain Hoist</a>
+                <p>Hoists</p>
               </div>
               <!-- Price -->
-              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="chain-block"
-                  data-name="Chain Block" data-image="images/products/manual-chain-hoist.png"
-                  data-url="product-detail_01.html?id=chain-block">Add to Quote</a></span>
+              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="manual-chain-hoist"
+                  data-name="Manual Chain Hoist" data-image="images/original_products/manual-chain-hoist.jpg"
+                  data-url="product-detail_01.html?id=manual-chain-hoist">Add to Quote</a></span>
             </div>
 
-            <!-- Item -->
+            <!-- Item 2: Manual Push Trolley -->
             <div class="item">
               <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="images/products/pallet-truck.jpg" alt=""> <img
-                  class="img-2" src="images/products/pallet-truck.jpg" alt="">
+              <div class="item-img"> <img class="img-1" src="images/original_products/manual-push-trolley.jpg"
+                  alt="Manual Push Trolley"> <img class="img-2" src="images/original_products/manual-push-trolley.jpg"
+                  alt="Manual Push Trolley">
                 <!-- Overlay -->
                 <div class="overlay">
                   <div class="position-center-center">
-                    <div class="inn"><a href="images/products/pallet-truck.jpg" data-lighter><i
+                    <div class="inn"><a href="images/original_products/manual-push-trolley.jpg" data-lighter><i
                           class="icon-magnifier"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
                   </div>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=pallet-truck">Pallet Truck</a>
-                <p>Material Handling</p>
+              <div class="item-name"> <a href="product-detail_01.html?id=manual-push-trolley">Trolley</a>
+                <p>Trolleys</p>
               </div>
               <!-- Price -->
-              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="pallet-truck"
-                  data-name="Pallet Truck" data-image="images/products/pallet-truck.jpg"
-                  data-url="product-detail_01.html?id=pallet-truck">Add to Quote</a></span>
+              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="manual-push-trolley"
+                  data-name="Trolley" data-image="images/original_products/manual-push-trolley.jpg"
+                  data-url="product-detail_01.html?id=manual-push-trolley">Add to Quote</a></span>
             </div>
 
-            <!-- Item -->
+            <!-- Item 3: Electrical Winch -->
             <div class="item">
               <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="images/products/electrical-chain-hoist.png" alt=""> <img
-                  class="img-2" src="images/products/electrical-chain-hoist.png" alt="">
+              <div class="item-img"> <img class="img-1" src="images/original_products/electrical_winch.jpg"
+                  alt="Electrical Winch"> <img class="img-2" src="images/original_products/electrical_winch.jpg"
+                  alt="Electrical Winch">
                 <!-- Overlay -->
                 <div class="overlay">
                   <div class="position-center-center">
-                    <div class="inn"><a href="images/products/electrical-chain-hoist.png" data-lighter><i
+                    <div class="inn"><a href="images/original_products/electrical_winch.jpg" data-lighter><i
                           class="icon-magnifier"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
                   </div>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=electric-hoist">Electric Hoist</a>
-                <p>Lifting Equipment</p>
+              <div class="item-name"> <a href="product-detail_01.html?id=electrical-winch">Electrical Winch</a>
+                <p>Winches</p>
               </div>
               <!-- Price -->
-              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="electric-hoist"
-                  data-name="Electric Hoist" data-image="images/products/electrical-chain-hoist.png"
-                  data-url="product-detail_01.html?id=electric-hoist">Add to Quote</a></span>
+              <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="electrical-winch"
+                  data-name="Electrical Winch" data-image="images/original_products/electrical_winch.jpg"
+                  data-url="product-detail_01.html?id=electrical-winch">Add to Quote</a></span>
             </div>
 
-            <!-- Item -->
+            <!-- Item 4: Drum Lifter -->
             <div class="item">
               <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="images/products/drum-lifter.png" alt=""> <img class="img-2"
-                  src="images/products/drum-lifter.png" alt="">
+              <div class="item-img"> <img class="img-1" src="images/original_products/drum_lifter.jpg"
+                  alt="Drum Lifter"> <img class="img-2" src="images/original_products/drum_lifter.jpg"
+                  alt="Drum Lifter">
                 <!-- Overlay -->
                 <div class="overlay">
                   <div class="position-center-center">
-                    <div class="inn"><a href="images/products/drum-lifter.png" data-lighter><i
+                    <div class="inn"><a href="images/original_products/drum_lifter.jpg" data-lighter><i
                           class="icon-magnifier"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
                   </div>
                 </div>
@@ -419,7 +418,7 @@
               </div>
               <!-- Price -->
               <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="drum-lifter"
-                  data-name="Drum Lifter" data-image="images/products/drum-lifter.png"
+                  data-name="Drum Lifter" data-image="images/original_products/drum_lifter.jpg"
                   data-url="product-detail_01.html?id=drum-lifter">Add to Quote</a></span>
             </div>
           </div>
@@ -449,20 +448,7 @@
         </div>
       </section>
 
-      <!-- News Letter -->
-      <section class="news-letter padding-top-150 padding-bottom-150">
-        <div class="container">
-          <div class="heading light-head text-center margin-bottom-30">
-            <h4>NEWSLETTER</h4>
-            <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere
-              odi </span>
-          </div>
-          <form>
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">SEND ME</button>
-          </form>
-        </div>
-      </section>
+
     </div>
 
     <!--======= FOOTER =========-->
@@ -470,57 +456,37 @@
       <div class="container">
 
         <!-- ABOUT Location -->
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="about-footer"> <img class="margin-bottom-30" src="images/logo.png" alt="">
             <p><i class="icon-pointer"></i> Industrial Area, Dubai, <br>
               United Arab Emirates.</p>
-            <p><i class="icon-call-end"></i> 1.800.123.456789</p>
+            <p><i class="icon-call-end"></i> +971 50 123 4567</p>
             <p><i class="icon-envelope"></i> info@europull.com</p>
           </div>
         </div>
 
         <!-- HELPFUL LINKS -->
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h6>HELPFUL LINKS</h6>
           <ul class="link">
             <li><a href="products.html"> Products</a></li>
-            <li><a href="#."> Find a Store</a></li>
-            <li><a href="#."> Features</a></li>
-            <li><a href="#."> Privacy Policy</a></li>
-            <li><a href="#."> Blog</a></li>
-            <li><a href="#."> Press Kit </a></li>
+            <li><a href="about-us_01.html"> About Us</a></li>
+            <li><a href="contact.html"> Contact</a></li>
           </ul>
         </div>
 
         <!-- SHOP -->
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h6>SHOP</h6>
           <ul class="link">
-            <li><a href="about-us_01.html"> About Us</a></li>
-            <li><a href="#."> Career</a></li>
-            <li><a href="#."> Shipping Methods</a></li>
-            <li><a href="contact.html"> Contact</a></li>
-            <li><a href="#."> Support</a></li>
-            <li><a href="#."> Retailer</a></li>
-          </ul>
-        </div>
-
-        <!-- MY ACCOUNT -->
-        <div class="col-md-3">
-          <h6>MY ACCOUNT</h6>
-          <ul class="link">
-            <li><a href="#."> Login</a></li>
-            <li><a href="#."> My Account</a></li>
-            <li><a href="quote-cart.html"> My Cart</a></li>
-            <li><a href="#."> Wishlist</a></li>
-            <li><a href="quote-cart.html"> Checkout</a></li>
+            <li><a href="quote-cart.html"> Quote Cart</a></li>
           </ul>
         </div>
 
         <!-- Rights -->
 
         <div class="rights">
-          <p>© 2024 Europull All right reserved. </p>
+          <p>© 2026 Europull All right reserved. </p>
           <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a> </div>
         </div>
       </div>

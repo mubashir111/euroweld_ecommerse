@@ -177,26 +177,77 @@
                                 <form id="quote-form">
                                     <input type="hidden" id="quote_items_data" name="items">
                                     <div class="row">
+                                        <!-- Full Name -->
                                         <div class="col-md-6">
-                                            <label>Name *
+                                            <label>Full Name *
                                                 <input type="text" name="name" required placeholder="">
                                             </label>
                                         </div>
+                                        <!-- Email -->
                                         <div class="col-md-6">
                                             <label>Email *
                                                 <input type="email" name="email" required placeholder="">
                                             </label>
                                         </div>
+
+                                        <!-- Company -->
                                         <div class="col-md-6">
-                                            <label>Phone
-                                                <input type="text" name="phone" placeholder="">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Company
+                                            <label>Company Name
                                                 <input type="text" name="company" placeholder="">
                                             </label>
                                         </div>
+
+                                        <!-- Country -->
+                                        <div class="col-md-6">
+                                            <label>Country *
+                                                <select name="country" class="form-control" required>
+                                                    <option value="">Select Country</option>
+                                                    <option value="UAE">United Arab Emirates</option>
+                                                    <option value="KSA">Saudi Arabia</option>
+                                                    <option value="Qatar">Qatar</option>
+                                                    <option value="Bahrain">Bahrain</option>
+                                                    <option value="Kuwait">Kuwait</option>
+                                                    <option value="Oman">Oman</option>
+                                                    <option value="India">India</option>
+                                                    <option value="USA">United States</option>
+                                                    <option value="UK">United Kingdom</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </label>
+                                        </div>
+
+                                        <!-- District -->
+                                        <div class="col-md-6">
+                                            <label>District
+                                                <input type="text" name="district" placeholder="">
+                                            </label>
+                                        </div>
+
+                                        <!-- Mobile Number -->
+                                        <div class="col-md-6">
+                                            <label>Mobile Number *</label>
+                                            <div class="row" style="margin-left: -5px; margin-right: -5px;">
+                                                <div class="col-xs-4" style="padding-left: 5px; padding-right: 5px;">
+                                                    <select name="country_code" class="form-control">
+                                                        <option value="+971">+971 (UAE)</option>
+                                                        <option value="+966">+966 (KSA)</option>
+                                                        <option value="+974">+974 (QAT)</option>
+                                                        <option value="+973">+973 (BHR)</option>
+                                                        <option value="+965">+965 (KWT)</option>
+                                                        <option value="+968">+968 (OMN)</option>
+                                                        <option value="+91">+91 (IND)</option>
+                                                        <option value="+1">+1 (USA)</option>
+                                                        <option value="+44">+44 (UK)</option>
+                                                        <option value="">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-xs-8" style="padding-left: 5px; padding-right: 5px;">
+                                                    <input type="text" name="phone" required placeholder="Number">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Message -->
                                         <div class="col-md-12">
                                             <label>Message
                                                 <textarea name="message" placeholder="Additional details..."></textarea>

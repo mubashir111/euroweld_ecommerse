@@ -66,10 +66,31 @@ $(document).ready(function () {
         $btn.attr('data-id', productId);
         $btn.attr('data-name', product.name);
         $btn.attr('data-image', product.images[0]);
-        // url is already correct (self)
+        $btn.attr('data-url', 'product-detail_01.html?id=' + productId);
 
         // Update document title
         document.title = product.name + " - Europull";
+
+        // --- Social Sharing & Open Graph ---
+        var currentUrl = window.location.href;
+        var imageUrl = window.location.origin + window.location.pathname.replace('product-detail_01.html', '') + product.images[0];
+
+        // Update Meta Tags
+        $('meta[property="og:title"]').attr('content', product.name + " - Europull");
+        $('meta[property="og:description"]').attr('content', product.description);
+        $('meta[property="og:image"]').attr('content', imageUrl);
+        $('meta[property="og:url"]').attr('content', currentUrl);
+
+        // Update Share Links
+        // Facebook
+        $('.share-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(currentUrl));
+
+        // WhatsApp
+        $('.share-whatsapp').attr('href', 'https://wa.me/?text=' + encodeURIComponent("Check out this " + product.name + ": " + currentUrl));
+
+        // Instagram (Note: Instagram does not support direct link sharing via web URL, linking to profile or homepage as fallback)
+        $('.share-instagram').attr('href', 'https://www.instagram.com/');
+
     } else {
         // Handle "Product Not Found"
         $('.shop-detail').html('<div class="alert alert-danger">Product not found.</div>');

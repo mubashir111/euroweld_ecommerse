@@ -119,6 +119,19 @@ var QuoteCart = (function ($) {
         });
     }
 
+    function updateQty(id, action) {
+        var item = cart.find(function (i) { return i.id === id; });
+        if (!item) return;
+
+        if (action === 'increase') {
+            item.qty++;
+        } else if (action === 'decrease') {
+            item.qty--;
+            if (item.qty < 1) item.qty = 1;
+        }
+        saveCart();
+    }
+
     function renderCartPage() {
         var $container = $('#quote-cart-body');
         if ($container.length === 0) return;
@@ -142,7 +155,11 @@ var QuoteCart = (function ($) {
                         </div>
                     </td>
                     <td class="text-center">
-                        <input type="text" value="${item.qty}" readonly class="form-control" style="width: 50px; margin: 0 auto;">
+                        <div class="qty-control" style="display: flex; justify-content: center; align-items: center;">
+                            <button class="btn btn-xs btn-default update-qty" data-id="${item.id}" data-action="decrease" style="margin-right: 5px; padding: 2px 8px;">-</button>
+                            <input type="text" value="${item.qty}" readonly class="form-control" style="width: 50px; text-align: center; margin: 0; height: 30px; padding: 5px;">
+                            <button class="btn btn-xs btn-default update-qty" data-id="${item.id}" data-action="increase" style="margin-left: 5px; padding: 2px 8px;">+</button>
+                        </div>
                     </td>
                     <td class="text-center">
                         <a href="#" class="remove-item" data-id="${item.id}"><i class="icon-close"></i></a>
@@ -182,15 +199,23 @@ var QuoteCart = (function ($) {
             removeFromCart(id);
         });
 
+        // Update Qty Click
+        $(document).on('click', '.update-qty', function (e) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            var action = $(this).data('action');
+            updateQty(id, action);
+        });
+
         // Add to Quote Click (Global delegate)
         $(document).on('click', '.add-to-quote', function (e) {
             e.preventDefault();
             var $btn = $(this);
             var product = {
-                id: $btn.data('id'),
-                name: $btn.data('name'),
-                image: $btn.data('image'),
-                url: $btn.data('url'),
+                id: $btn.attr('data-id'),
+                name: $btn.attr('data-name'),
+                image: $btn.attr('data-image'),
+                url: $btn.attr('data-url'),
                 qty: 1
             };
             addToCart(product);
@@ -198,11 +223,6 @@ var QuoteCart = (function ($) {
 
         // Open Sidebar via Navbar Icon
         $(document).on('click', '.user-basket', function (e) {
-            // Prevent default only if we want it to act as an opener, 
-            // but the href is quote-cart.html. Let's make it open sidebar on click,
-            // but double click or "View Cart" button in sidebar goes to page.
-            // Actually, usually user expects dropdown or sidebar. 
-            // Let's prevent default and open sidebar.
             e.preventDefault();
             openSidebar();
         });
